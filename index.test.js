@@ -1,4 +1,4 @@
-import { calculator, capitalize, caesarCipher, reverseString } from ".";
+import { analyzeArray, calculator, capitalize, caesarCipher, reverseString } from ".";
 
 test('capitalize', () => {
     expect(capitalize('chicken')).toBe('Chicken');
@@ -46,4 +46,13 @@ test('cipher case', () => {
 
 test('cipher long', () => {
     expect(caesarCipher('Jon is TestIng things!?', 7)).toBe('Qvu pz AlzaPun aopunz!?');
+});
+
+test('analyze array', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+      });
 });
